@@ -1,0 +1,18 @@
+#!/bin/bash
+M=50
+for N in $(seq 2 "$M")
+do
+    N_2=$(echo "sqrt($N)" | bc)
+    JE_NIEJE="je"
+    for D in $(seq 2 $N_2)
+    do
+        ZVYSOK=$(echo "$N%$D" | bc)
+        if test "$ZVYSOK" == 0
+        then
+            JE_NIEJE="nie je"
+            break
+        fi
+    done
+    echo "$N $JE_NIEJE prvočíslo"
+done
+

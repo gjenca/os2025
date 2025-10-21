@@ -1,0 +1,15 @@
+celkom 40
+-rw-r--r-- 1 gejza gejza  458 okt  7 14:58 fork_dup2.c
+-rw-r--r-- 1 gejza gejza  492 okt  7 14:58 fork_wait.c
+-rw-r--r-- 1 gejza gejza  156 okt  7 14:58 fork2.c
+lrwxrwxrwx 1 gejza gejza    7 okt  7 15:15 fork2_slink.c -> fork2.c
+lrwxrwxrwx 1 gejza gejza   13 okt  7 15:17 fork2_slink_slink.c -> fork2_slink.c
+-rw-r--r-- 1 gejza gejza  514 okt  7 14:58 fork3_v1.c
+-rw-r--r-- 1 gejza gejza  522 okt  7 14:58 fork3_v2.c
+-rw-r--r-- 1 gejza gejza  330 okt  7 14:58 fork4.c
+-rw-r--r-- 1 gejza gejza    0 okt 13 12:10 ls.txt
+-rw-r--r-- 1 gejza gejza  505 okt  7 14:58 pipe.c
+-rw-r--r-- 1 gejza gejza  924 okt  7 14:58 pipe_fork_bc.c
+-rw-r--r-- 1 gejza gejza 1267 okt  7 14:58 pipe_fork_bc_many.c
+-rw-r--r-- 1 gejza gejza  783 okt  7 14:58 pipe_fork.c
+prw-r--r-- 1 gejza gejza    0 okt  7 15:34 rura
