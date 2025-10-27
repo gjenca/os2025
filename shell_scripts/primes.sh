@@ -1,6 +1,11 @@
 #!/bin/bash
-M=50
-for N in $(seq 2 "$M")
+if test "$#" = 0
+then
+    M="2 50"
+else
+    M="$@"
+fi
+for N in $(seq $M)
 do
     N_2=$(echo "sqrt($N)" | bc)
     JE_NIEJE="je"
