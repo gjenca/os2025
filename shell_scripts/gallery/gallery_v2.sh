@@ -1,14 +1,24 @@
 #!/bin/bash
 
 HEADER='Gallery'
-# Máme -h a potom neprázdny argument $2
-if [ "$1" = '-h' -a -n "$2" ]
-then
-    HEADER="$2"
-    shift
-    shift
-fi
-
+PERCENT=20
+while true
+do
+    # Máme -h a potom neprázdny argument $2
+    if [ "$1" = '-h' -a -n "$2" ]
+    then
+        HEADER="$2"
+        shift
+        shift
+    elif [ "$1" = '-p' -a -n "$2" ]
+    then
+        PERCENT="$2"
+        shift
+        shift
+    else
+        break
+    fi
+done
 cat <<THE_END
 <html>
 <body>
@@ -25,7 +35,7 @@ fi
 for IMGFILE in "$@"
 do
     MINIFILE=$(echo "$IMGFILE" | sed 's#\(.*\)jpg$#mini/\1png#')
-    magick "$IMGFILE" -resize '20%' "$MINIFILE"
+    magick "$IMGFILE" -resize "$PERCENT%" "$MINIFILE"
     echo '<li>'
     echo '<a href="'"$IMGFILE"'">'
     echo '<img src="'"$MINIFILE"'">'
